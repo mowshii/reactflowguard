@@ -1,13 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders ReactFlowGuard application', () => {
+test('renders Brew & Bloom Cafe application', () => {
   render(<App />);
 
-  const titleElement = screen.getByRole('heading', {
-    name: 'ReactFlowGuard',
-    level: 1
+  const heading = screen.getByRole('heading', {
+    name: /Your daily cup of happiness/i
   });
 
-  expect(titleElement).toBeInTheDocument();
+  expect(heading).toBeInTheDocument();
 });
